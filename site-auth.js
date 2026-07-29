@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Check if we are on a protected page and not logged in
     const path = window.location.pathname;
-    const isProtected = path.endsWith("wallet.html") || path.endsWith("history.html") || path.endsWith("referrals.html");
+    const isProtected = path.endsWith("wallet.html") || path.endsWith("history.html") || path.endsWith("referrals.html") || path.endsWith("support.html");
     const token = localStorage.getItem("token");
 
     if (isProtected && !token) {
