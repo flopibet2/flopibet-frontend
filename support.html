@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flopibet Support</title>
+    <link rel="icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#0a0e1a',
+                        'brand-card': '#141828',
+                        'brand-surface': '#1c2140',
+                        'brand-border': '#2a2f4a',
+                        'brand-accent': '#6c5ce7',
+                        'brand-accent-light': '#a29bfe',
+                        'trx-red': '#ff0013',
+                        'usdt-green': '#26a17b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site.css">
+</head>
+<body class="bg-brand-dark min-h-screen font-sans text-white overflow-x-hidden">
+
+    <!-- ═══════════ NAVIGATION BAR ═══════════ -->
+    <nav id="main-nav" class="w-full bg-brand-dark/80 backdrop-blur-xl border-b border-brand-border/40 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+            <!-- Logo + Name -->
+            <div class="flex items-center gap-3">
+                <div id="nav-logo" class="w-10 h-10 rounded-full overflow-hidden bg-[#14243a] flex items-center justify-center shadow-lg shadow-black/30 ring-2 ring-white/10">
+                    <img src="assets/flopibet%20logo.png" alt="Flopibet logo" class="w-full h-full object-cover" />
+                </div>
+                <span id="nav-brand-name" class="text-lg font-bold tracking-tight bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Flopibet</span>
+            </div>
+
+            <!-- Nav Links -->
+            <div class="hidden md:flex items-center gap-1">
+                <a href="wallet.html" id="nav-wallet" class="nav-link relative px-5 py-2 rounded-full text-sm font-medium text-gray-400 hover:text-white transition-all duration-300">Wallet</a>
+                <a href="history.html" id="nav-history" class="nav-link relative px-5 py-2 rounded-full text-sm font-medium text-gray-400 hover:text-white transition-all duration-300">History</a>
+                <a href="referrals.html" id="nav-referrals" class="nav-link relative px-5 py-2 rounded-full text-sm font-medium text-gray-400 hover:text-white transition-all duration-300">Referrals</a>
+                <a href="support.html" id="nav-support" class="nav-link active relative px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300">Support</a>
+            </div>
+
+            <!-- Balance & Logout -->
+            <div class="flex items-center gap-4">
+                <button onclick="siteLogout()" class="text-sm font-medium text-brand-accent-light hover:text-white transition-colors">Logout</button>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-400 hover:text-white transition-colors" aria-label="Toggle mobile menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden border-t border-brand-border/40 bg-brand-dark/95 backdrop-blur-xl">
+            <div class="px-4 py-3 space-y-1">
+                <a href="wallet.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-400 hover:text-white hover:bg-brand-surface/50 transition-colors">Wallet</a>
+                <a href="history.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-400 hover:text-white hover:bg-brand-surface/50 transition-colors">History</a>
+                <a href="referrals.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-400 hover:text-white hover:bg-brand-surface/50 transition-colors">Referrals</a>
+                <a href="support.html" class="block px-4 py-2.5 rounded-lg text-sm font-semibold text-brand-accent-light bg-brand-accent/10">Support</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════ MAIN CONTENT ═══════════ -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 flex justify-center">
+
+        <div class="wallet-card relative rounded-3xl overflow-hidden border border-brand-border/40 bg-brand-card p-8 sm:p-12 w-full max-w-2xl shadow-2xl text-center">
+            <div class="pattern-overlay absolute inset-0 pointer-events-none opacity-[0.04]"></div>
+            <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-accent/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="relative z-10 mb-8">
+                <div class="w-20 h-20 rounded-full overflow-hidden bg-[#14243a] flex items-center justify-center mx-auto mb-6 shadow-lg shadow-black/30 ring-4 ring-white/10">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-brand-accent-light">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                    </svg>                  
+                </div>
+                <h1 class="text-3xl font-bold tracking-tight mb-4">Contact Support</h1>
+                
+                <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                    For any query please contact us via email. We are available 24/7 to assist you with your account, transactions, and technical issues.
+                </p>
+
+                <a href="mailto:support@flopibet.site" class="inline-block bg-brand-surface border border-brand-border hover:border-brand-accent transition-colors rounded-2xl p-6 sm:px-10 mb-8 group cursor-pointer shadow-lg shadow-black/20">
+                    <div class="text-brand-accent-light text-sm font-medium uppercase tracking-wider mb-2 group-hover:text-white transition-colors">Email Us At</div>
+                    <div class="text-2xl sm:text-4xl font-bold text-white tracking-tight break-all">support@flopibet.site</div>
+                </a>
+
+                <div class="bg-brand-surface/30 rounded-xl p-6 border border-brand-border/50 text-left">
+                    <h3 class="text-white font-semibold flex items-center gap-2 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                        </svg>
+                        Important Instructions
+                    </h3>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2 text-sm">
+                        <li>Please email from your <strong>registered email address</strong>.</li>
+                        <li>If you are using a different email, you must <strong>mention your registered email address</strong> in your message.</li>
+                        <li>Include relevant details such as transaction IDs if asking about deposits/withdrawals.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="site-auth.js"></script>
+    <script>
+        // Setup mobile menu toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
