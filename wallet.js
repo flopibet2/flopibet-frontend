@@ -619,7 +619,7 @@ async function loadHistory() {
                 const statusColor = isCompleted ? 'text-emerald-400' : (isPending ? 'text-yellow-400' : 'text-red-400');
                 const hoverColor = isCompleted ? 'hover:border-emerald-500/30' : (isPending ? 'hover:border-yellow-500/30' : 'hover:border-red-500/30');
                 const iconBg = isCompleted ? 'bg-emerald-500/20' : (isPending ? 'bg-yellow-500/20' : 'bg-red-500/20');
-                const title = isReceived ? 'Received TRX' : 'Withdraw Profit';
+                const title = tx.type === 'received_trx' ? 'Received TRX' : tx.type === 'withdraw_profit' ? 'Withdraw Profit' : tx.type === 'withdraw_balance' ? 'Withdraw Balance' : 'Unknown';
                 const counterpartyLabel = isReceived ? 'From' : 'To';
                 const counterpartyAddress = isReceived ? (tx.from_address || 'Unknown sender') : (tx.to_address || 'Unknown address');
         const formatAmount = (value) => {
