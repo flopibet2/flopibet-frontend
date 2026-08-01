@@ -137,7 +137,7 @@ function formatUsdAmount(value) {
 
 function getWithdrawLimitUsd() {
     if (Number(currentUserProfile?.profit_per_day) === 1) {
-        return 50;
+        return 100;
     }
 
     const profileLimit = Number(currentUserProfile?.withdraw_profit_limit_usd);
