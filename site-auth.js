@@ -12,7 +12,7 @@ function resolveApiBase() {
         return "http://127.0.0.1:8000";
     }
 
-    return "https://web-production-cec3d.up.railway.app";
+    return "https://web-production-5e9f10.up.railway.app";
 }
 
 const SITE_AUTH_API_URL = `${resolveApiBase()}/api/auth`;
